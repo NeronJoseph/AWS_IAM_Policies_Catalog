@@ -1,0 +1,19 @@
+# This AWS IAM Policy has limited permission to regsiter a new version of task definition and udpate a service.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "ecs:UpdateService",
+            "Resource": "arn:aws:ecs:ap-south-1:640179687893:service/<cluster-name>/<service_name>"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "ecs:RegisterTaskDefinition",
+            "Resource": "*"
+        }
+    ]
+}
